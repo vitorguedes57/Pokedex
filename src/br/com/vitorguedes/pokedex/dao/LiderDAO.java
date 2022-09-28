@@ -11,8 +11,8 @@ import java.util.List;
 public class LiderDAO {
 
     private static final String INSERIR_SQL = "Insert into lider "
-            + "(lider, tipo, jogo, pagina, numero) "
-            + "values ('%s','%s','%s',%d, %d)";
+            + "(lider, tipo, jogo, pagina) "
+            + "values ('%s','%s','%s',%d)";
     private static final String ALTERAR_SQL = "Update lider "
             + "set lider = '%s',tipo ='%s', jogo = '%s'  where numero = %d";
     private static final String REMOVER_SQL = "delete from lider "
