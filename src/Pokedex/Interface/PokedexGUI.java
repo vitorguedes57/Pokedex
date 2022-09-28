@@ -407,12 +407,13 @@ public class PokedexGUI extends javax.swing.JFrame {
         String tipo = jTabelaPokemon.getValueAt(jTabelaPokemon.getSelectedRow(), 1).toString();
         String jogo = jTabelaPokemon.getValueAt(jTabelaPokemon.getSelectedRow(), 2).toString();
         String status = jTabelaPokemon.getValueAt(jTabelaPokemon.getSelectedRow(), 3).toString();
+        Integer numero = Integer.valueOf( jTabelaPokemon.getValueAt(jTabelaPokemon.getSelectedRow(), 4).toString());
         String novoPokemon = JOptionPane.showInputDialog("Escreva o novo Pokemon", pokemon );
         String novoTipo = JOptionPane.showInputDialog("Escreva o novo Tipo", tipo );
         String novoJogo = JOptionPane.showInputDialog("Escreva o Jogo", jogo);
         String novoStatus = JOptionPane.showInputDialog("Escreva o Status novo", status);
         
-        PokemonDAO.alterar(new Pokemon(novoPokemon, novoTipo, novoJogo, novoStatus, pagina, 1));
+        PokemonDAO.alterar(new Pokemon(novoPokemon, novoTipo, novoJogo, novoStatus, pagina, numero));
         this.atualiza();
         
     }//GEN-LAST:event_jModificarPokemonActionPerformed
